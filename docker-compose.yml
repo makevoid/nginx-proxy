@@ -1,0 +1,11 @@
+version: '2'
+services:
+  nginx:
+    # image: makevoid/nginx-reverse-proxy
+    build: .
+    stdin_open: true
+    tty: true
+    ports:
+      - "80:80"
+    environment:
+      PROXY_RULES: "127.0.0.1 > localhost:9292"
