@@ -1,7 +1,7 @@
 version: '2'
 services:
   nginx:
-    # image: makevoid/nginx-reverse-proxy
+    image: makevoid/nginx-proxy
     build: .
     stdin_open: true
     tty: true
